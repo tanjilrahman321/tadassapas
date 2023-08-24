@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/media.css" />
+
+  <title>Tadas Techniek</title>
+</head>
+
+<body>
+  <br>
+  <div class="container text-center">
+    <a href="#"><img src="images/logo.png" width="200px" alt=""></a>
+  </div>
+
+  <form action="https://formspree.io/f/mvojawad" class="form needs-validation" novalidate method="POST">
+    <!-- Progress bar -->
+    <div class="progressbar">
+      <div class="progress" id="progress"></div>
+
+      <div class="progress-step progress-step-active" data-title=" "></div>
+      <div class="progress-step" data-title=" "></div>
+      <!-- <div class="progress-step" data-title=" "></div> -->
+    </div>
+
+    <!-- <label for="validationCustomUsername" class="form-label">Username</label>
+    <div class="input-group has-validation">
+      <span class="input-group-text" id="inputGroupPrepend">@</span>
+      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+      <div class="invalid-feedback">
+        Please choose a username.
+      </div>
+    </div> -->
+
+
+    <!-- Steps one-->
+    <div class="form-step form-step-active">
+      <h1 class="step-title">TIJDELIJK 30% KORTING! Stel Hier Jouw Eigen Zonnepanelen Samen In Minder Dan 30 Seconden!👇</h1>
+      <div class="mb-4 alert alert-warning alert-dismissible fade show" role="alert">
+        <div class="row align-items-center">
+          <div class="col-1"><i class="lock-icon fa-solid fa-lock"></i></div>
+          <div class="col pe-0">
+            LET OP! VRAAG VANDAAG NOG AAN! DE 30% KORTING GELDT NIET LANG MEER!
+          </div>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+      <div class="form-group form-box">
+        <div class="row align-items-center mb-3">
+          <div class="col-6 text-start">
+            <h2 style="font-weight: 700; font-size: 16px;" class="mb-0">Soort Dak?</h2>
+          </div>
+          <div class="col-6 text-end">
+            <span class="badge bg-danger">Verplicht</span>
+          </div>
+        </div>
+        <div class="form-check ps-0">
+          <input class="form-check-input cc-check-box" type="radio" value="Platdak" name="soort_dak" id="" required>
+          <label class="form-check-label" for="">
+            Platdak
+          </label>
+        </div>
+        <div class="form-check ps-0">
+          <input class="form-check-input cc-check-box" type="radio" value="Schuindak" name="soort_dak" id="" required>
+          <label class="form-check-label" for="">
+            Schuindak
+          </label>
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+      </div>
+
+      <div class="form-group form-box">
+        <div class="row align-items-center mb-3">
+          <div class="col-sm-9 text-start">
+            <h2 style="font-weight: 700; font-size: 16px;" class="mb-0">Uw Jaarverbruik in KwH? (ongeveer)</h2>
+          </div>
+          <div class="col-sm-3 text-end">
+            <span class="badge bg-danger">Verplicht</span>
+          </div>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-sm-4">
+            <input type="number" name="jaarverbruik" class="form-control" id="number" min="2000" max="18000" onkeyup="changeRangeValue(this.value)" />
+          </div>
+          <div class="col-sm-8">
+            <div class="row align-items-center">
+              <div class="col-2 pe-0">2000</div>
+              <div class="col-8">
+                <input type="range" class="w-100" min="2000" max="18000" id="range" name="" value="0" step="" oninput="changeInputValue(this.value)" />
+              </div>
+              <div class="col-2 ps-0">18000</div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          function changeRangeValue(val) {
+            document.getElementById("range").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
+            showValue1(val);
+          }
+
+          function changeInputValue(val) {
+            document.getElementById("number").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
+            showValue1(val);
+          }
+        </script>
+
+      </div>
+
+      <div class="form-group form-box">
+        <div class="row align-items-center mb-3">
+          <div class="col-sm-9 text-start">
+            <h2 style="font-weight: 700; font-size: 16px;" class="mb-0">Wanneer moet het geplaatst worden?</h2>
+          </div>
+          <div class="col-sm-3 text-end">
+            <span class="badge bg-danger">Verplicht</span>
+          </div>
+        </div>
+        <div class="form-check ps-0">
+          <input class="form-check-input cc-check-box" type="radio" value="Zo snel mogelijk!" name="wanneer_moet_het_geplaatst_worden" id="" required>
+          <label class="form-check-label" for="">
+            Zo snel mogelijk!
+          </label>
+        </div>
+        <div class="form-check ps-0">
+          <input class="form-check-input cc-check-box" type="radio" value="Binnen 1 tot 2 weken" name="wanneer_moet_het_geplaatst_worden" id="" required>
+          <label class="form-check-label" for="">
+            Binnen 1 tot 2 weken
+          </label>
+        </div>
+        <div class="form-check ps-0">
+          <input class="form-check-input cc-check-box" type="radio" value="Binnen 2 tot 4 weken" name="wanneer_moet_het_geplaatst_worden" id="" required>
+          <label class="form-check-label" for="">
+            Binnen 2 tot 4 weken
+          </label>
+        </div>
+        <div class="form-check ps-0">
+          <input class="form-check-input cc-check-box" type="radio" value="Binnen 1 tot 2 maanden" name="wanneer_moet_het_geplaatst_worden" id="" required>
+          <label class="form-check-label" for="">
+            Binnen 1 tot 2 maanden
+          </label>
+        </div>
+        <div class="form-check ps-0">
+          <input class="form-check-input cc-check-box" type="radio" value="Langer dan 3 maanden" name="wanneer_moet_het_geplaatst_worden" id="" required>
+          <label class="form-check-label" for="">
+            Langer dan 3 maanden
+          </label>
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+      </div>
+
+      <div class="form-group form-box">
+        <div class="row align-items-center mb-3">
+          <div class="col-sm-9 text-start">
+            <h2 style="font-weight: 700; font-size: 16px;" class="mb-0">Wanneer bent u het beste bereikbaar?</h2>
+          </div>
+          <div class="col-sm-3 text-end">
+            <span class="badge bg-danger">Verplicht</span>
+          </div>
+        </div>
+        <div class="form-check ps-0">
+          <input class="form-check-input cc-check-box" type="radio" value="s'Ochtends" name="wanneer_bent_u_het_beste_bereikbaar" id="" required>
+          <label class="form-check-label" for="">
+            s'Ochtends
+          </label>
+        </div>
+        <div class="form-check ps-0">
+          <input class="form-check-input cc-check-box" type="radio" value="s'Middags" name="wanneer_bent_u_het_beste_bereikbaar" id="" required>
+          <label class="form-check-label" for="">
+            s'Middags
+          </label>
+
+        </div>
+        <div class="form-check ps-0">
+          <input class="form-check-input cc-check-box" type="radio" value="s'Avonds" name="wanneer_bent_u_het_beste_bereikbaar" id="" required>
+          <label class="form-check-label" for="">
+            s'Avonds
+          </label>
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+      </div>
+
+
+
+      <div class="">
+        <a href="#" class="cc-btn btn-next width-50 ml-auto">Offerte aanvragen +</a>
+      </div>
+    </div>
+
+    <div class="form-step">
+
+
+      <div class="form-box">
+
+        <h2 class="form-box-title">Uw gegevens</h2>
+        <p class="form-box-desc">
+          Contactgegevens
+        </p>
+
+        <div>
+          <label for="email" class="mb-2" style="font-weight: 500;">E-mailadres * </label>
+          <input type="text" class="form-control" id="email" name="email" placeholder="Vul je e-mailadres in *" required>
+          <div class="invalid-feedback">
+            E-mailadres is required.
+          </div>
+        </div>
+        <div class="mt-3">
+          <label for="telefoonnummer" class="mb-2" style="font-weight: 500;">Telefoonnummer *</label>
+          <input type="text" class="form-control mb-4" id="" name="telefoonnummer" placeholder="Telefoonnummer *" required>
+          <div class="invalid-feedback">
+            Telefoonnummer is required.
+          </div>
+        </div>
+
+        <label for="username" class="mb-2" style="font-weight: 500;">Adresgegevens</label>
+        <select class="form-select" name="adresgegevens" aria-label="Default select example">
+          <option value="Nederland" selected>Nederland</option>
+          <option value="Duitsland">Duitsland</option>
+          <option value="België">België</option>
+          <option value="Overige">Overige</option>
+        </select>
+        <p class="badge bg-secondary mt-3">Staat je land er niet tussen? Kies dan overige.</p>
+        <!-- <div class="checkbox-ts">
+            <input class="form-check-input me-2 checkme" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label mb-4" for="flexCheckDefault">
+              Is 2 Factor Authentication turned on?
+            </label> 
+          </div> -->
+
+        <!-- sdfdfdf dfds  -->
+
+        <div class="row">
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="username" name="voornaam" placeholder="Voornaam *" required>
+            <div class="invalid-feedback">
+              Voornaam is required.
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="username" name="achternaam" placeholder="Achternaam *" required>
+            <div class="invalid-feedback">
+              Achternaam is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="username" name="postcode" placeholder="Postcode *" required>
+            <div class="invalid-feedback">
+              Postcode is required.
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="username" name="huisnummer" placeholder="Huisnummer *" required>
+            <div class="invalid-feedback">
+              Huisnummer is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="username" name="plaats" placeholder="plaats *" required>
+            <div class="invalid-feedback">
+              Plaats is required.
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="username" name="straatnaam" placeholder="straatnaam *" required>
+            <div class="invalid-feedback">
+              Straatnaam is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="checkbox-card mt-3">
+          <div class="checkbox">
+            <label>
+              <input class="form-check-input me-2 checkme" type="checkbox" value="" id="flexCheckDefault"> <label class="form-check-label mb-4" for="flexCheckDefault">
+                Opmerking toevoegen
+              </label>
+            </label>
+          </div>
+          <div class="passport-box">
+            <textarea name="comments" class="w-100 border-0 cc-comment form-control" id="" cols="30" rows="5" placeholder="Waar kunnen wij nog rekening mee houden?"></textarea> <br>
+          </div>
+
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            Ik ga akkoord met de <a style="font-weight: 500; color: #000 !important;" class="false __className_8bad62" target="_blank" tabindex="99" href="https://www.tadas-techniek.nl/algemene-voorwaarden">algemene voorwaarden</a> van&nbsp;Tadas Techniek
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+
+        <!-- gfsdg  -->
+
+
+
+
+
+      </div>
+
+      <div class="btns-group">
+        <a href="#" class="btn btn-primary btn-prev">Previous</a>
+        <input type="submit" class="btn btn-success" value="SAVE">
+      </div>
+    </div>
+
+
+
+    <!-- <div class="form-step">
+      <h1 class="step-title">Targeting</h1>
+      <p class="step-desc">
+        Fill in the data for your targeting. This will greatly contribute to your account perfomance.
+      </p>
+
+      <div class="btns-group">
+        <a href="#" class="btn btn-primary btn-prev">Previous</a>
+        <input type="submit" class="btn btn-success" value="SAVE">
+      </div>
+    </div> -->
+
+  </form>
+
+
+
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+      $(".checkme").click(function(event) {
+        var x = $(this).is(':checked');
+        if (x == true) {
+          $(this).parents(".checkbox-card").find('.passport-box').show();
+
+        } else {
+          $(this).parents(".checkbox-card").find('.passport-box').hide();
+
+        }
+      });
+    })
+
+
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+
+  </script>
+
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>
+
+</body>
+
+</html>

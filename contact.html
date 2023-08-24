@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!--meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--CSS Links-->
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <title>Tadas Techniek | Contact Details
+    </title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+        /* banner start  */
+        .banner {
+            min-height: 100vh;
+            padding: 100px 0;
+            border-top: 2px solid #E65921;
+            background-image: linear-gradient(to right, #171c30cf, #171c30e6, #171c30d4, #171c30a1), url(../images/banner.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .banner-content h1 {
+            margin-bottom: 50px;
+            line-height: 48px;
+            font-family: 'Poppins';
+            font-weight: 700;
+            font-size: 50px;
+            color: #fff;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+        }
+
+        .banner-content p {
+            font-family: 'Poppins';
+            font-weight: 700;
+            font-size: 24px;
+            color: #fff;
+            margin: 5px 0;
+        }
+
+        .banner-content ul {
+            margin-top: 40px;
+        }
+
+        .banner-content ul li {
+            color: #fff;
+            font-family: 'Poppins';
+            font-weight: 500;
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin: 10px 0;
+        }
+
+        .banner-content ul li i {
+            color: #E65921;
+        }
+
+        .form-wrapper {
+            margin-top: 4px;
+            background-color: #D0D2D4;
+            padding: 40px 30px;
+        }
+
+        .form-wrapper h2 {
+            position: relative;
+            margin-bottom: 15px;
+            font-family: 'Poppins';
+            font-weight: 700;
+            font-size: 40px;
+            color: #212843;
+            text-transform: capitalize;
+        }
+
+        .form-wrapper h2::after {
+            position: absolute;
+            content: '';
+            background-color: #E65921;
+            width: 100%;
+            height: 4px;
+            left: 0;
+            top: 50px;
+        }
+
+        .form-wrapper p {
+            font-family: 'Poppins';
+            font-weight: 700;
+            font-size: 18px;
+            color: #212843;
+            margin: 5px 0;
+        }
+
+        .form-wrapper .form-control {
+            background-color: #F2F2F2 !important;
+            border: 1px solid transparent;
+            height: 60px;
+            border-radius: 0px;
+            padding-bottom: 0;
+            padding-left: 8px;
+        }
+
+        .form-wrapper .form-control:focus {
+            border-color: #CE1616;
+            box-shadow: 0 0 0 0;
+        }
+
+        .form-control.is-invalid:focus,
+        .was-validated .form-control:invalid:focus {
+            box-shadow: 0 0 0 0;
+        }
+
+        .form-control.is-valid:focus,
+        .was-validated .form-control:valid:focus {
+            box-shadow: 0 0 0 0;
+        }
+
+        /* form select   */
+
+        .form-wrapper .form-select {
+            background-color: #F2F2F2 !important;
+            border: 1px solid transparent;
+            height: 60px;
+            border-radius: 0px;
+            font-weight: 700;
+        }
+
+        .form-wrapper .form-select:focus {
+            border-color: transparent;
+            box-shadow: 0 0 0 0;
+        }
+
+        .form-select.is-invalid:focus,
+        .was-validated .form-select:invalid:focus {
+            box-shadow: 0 0 0 0;
+        }
+
+        .form-select.is-valid:focus,
+        .was-validated .form-select:valid:focus {
+            box-shadow: 0 0 0 0;
+        }
+
+        .cc-label {
+            font-weight: 700;
+        }
+
+        /* form select   */
+
+        .form-wrapper label {
+            font-size: 14px;
+            font-family: 'Poppins';
+            font-weight: 500;
+            color: #000;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 8px;
+        }
+
+        .form-control-placeholder {
+            position: absolute;
+            top: 10px;
+            padding: 7px 0 0px 10px;
+            transition: all 200ms;
+        }
+
+        .form-control:focus+.form-control-placeholder,
+        .form-control:valid+.form-control-placeholder {
+            font-size: 75%;
+            transform: translate3d(0%, -25%, 0);
+            opacity: 1;
+            color: #333;
+        }
+
+        textarea {
+            resize: none;
+            padding-top: 20px !important;
+            height: 100px !important;
+        }
+
+        .form-control:focus+.cc-textarea,
+        .form-control:valid+.cc-textarea {
+            font-size: 75%;
+            transform: translate3d(0%, -16%, 0);
+            opacity: 1;
+            color: #333;
+        }
+
+        .submit-btn {
+            margin-top: 15px;
+            background-color: #E65921 !important;
+            border: 0;
+            width: 100%;
+            color: #fff;
+            font-family: 'Poppins';
+            font-weight: 700;
+            font-size: 16px;
+            padding: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* banner end  */
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- banner start  -->
+    <section class="banner" id="hero">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+
+                <div class="col-xl-6 col-lg-6">
+                    <div class="banner-content">
+                        <h1>Contact Now </h1>
+                        <p>Get in the experienced hands.</p>
+
+                        <p>Launch your vision W/24-Week Online Suppport.</p>
+
+                        <ul class="list-unstyled">
+                            <li><i class="fa-solid fa-circle-check"></i> info@gmail.com</li>
+                            <li><i class="fa-solid fa-circle-check"></i> +8801798326153</li>
+                            <li><i class="fa-solid fa-circle-check"></i> London, GTA</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="col-xl-5 col-lg-6 mt-lg-0 mt-4">
+                    <div class="form-wrapper">
+
+                        <h2>Send Us a Message</h2>
+                        <p>Put your case in our experienced hands. <br> Get started Now.</p>
+
+                        <form action="https://formspree.io/f/xknlrqjp" class="row needs-validation" novalidate
+                            method="POST">
+
+                            <div class="form-group d-sm-block d-none">
+                                <div class="row">
+                                    <div class="col-sm-6 pe-sm-1">
+                                        <input name="first_name" type="text" id="" class="form-control" required>
+                                        <label class="form-control-placeholder">First Name</label>
+                                        <div class="invalid-feedback">
+                                            First Name is Required
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 ps-sm-1">
+                                        <input name="last_name" type="text" id="" class="form-control" required>
+                                        <label class="form-control-placeholder">Last Name</label>
+                                        <div class="invalid-feedback">
+                                            Last Name is Required
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- name for small devices start-->
+                            <div class="form-group d-sm-none d-block">
+                                <input name="first_name" type="text" id="" class="form-control" required>
+                                <label class="form-control-placeholder">First Name</label>
+                                <div class="invalid-feedback">
+                                    First Name is Required
+                                </div>
+                            </div>
+                            <div class="form-group  d-sm-none d-block">
+                                <input name="last_name" type="text" id="" class="form-control" required>
+                                <label class="form-control-placeholder">Last Name</label>
+                                <div class="invalid-feedback">
+                                    Last Name is Required
+                                </div>
+                            </div>
+                            <!-- name for small devices end  -->
+
+                            <div class="form-group">
+                                <input name="email" type="email" id="" class="form-control" required>
+                                <label class="form-control-placeholder">Email</label>
+                                <div class="invalid-feedback">
+                                    Email is Required
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <input name="address" type="text" id="" class="form-control" required>
+                                <label class="form-control-placeholder">Home Address</label>
+                                <div class="invalid-feedback">
+                                    Home Address is Required
+                                </div>
+                            </div>
+
+
+                            <div class="form-group d-sm-block d-none">
+                                <div class="row">
+                                    <div class="col-sm-6 pe-1">
+                                        <input name="phone" type="phone" id="" class="form-control" required>
+                                        <label class="form-control-placeholder">Phone</label>
+                                        <div class="invalid-feedback">
+                                            Phone is Required
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 ps-1">
+                                        <input name="age" type="number" id="" class="form-control" required>
+                                        <label class="form-control-placeholder">Age</label>
+                                        <div class="invalid-feedback">
+                                            Age is required.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- phone and age for small devices  -->
+
+                            <div class="form-group d-sm-none d-block">
+                                <input name="phone" type="phone" id="" class="form-control" required>
+                                <label class="form-control-placeholder">Phone</label>
+                                <div class="invalid-feedback">
+                                    Phone Number is Required
+                                </div>
+                            </div>
+                            <div class="form-group  d-sm-none d-block">
+                                <input name="age" type="number" id="" class="form-control" required>
+                                <label class="form-control-placeholder">Age</label>
+                                <div class="invalid-feedback">
+                                    Age is required.
+                                </div>
+                            </div>
+
+                            <!-- phone and age for small devices  -->
+
+                            <div class="col-12">
+                                <button class="submit-btn" type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- banner end  -->
+
+
+    <!--JS -->
+
+    
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/popper.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,340 @@
+/* 
+html, body{ 
+	overflow-x: hidden; 
+} */
+
+/*Font Start*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+
+
+:root {
+  --primary-color: #FF0000;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  
+  font-family: 'Poppins';
+}
+/* Global Stylings */
+
+
+.width-50 {
+  width: 50%;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Progressbar */
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem 0 4rem;
+}
+
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #dcdcdc;
+  z-index: -1;
+}
+
+.progress {
+  background-color: var(--primary-color);
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.progress-step-active {
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+}
+
+.cc-btn{
+  background-color: #FF0000;
+  color: #fff !important;
+  border: 1px solid #FF0000;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 30px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.cc-btn:hover{
+  background-color: transparent;
+  color: #FF0000 !important;
+}
+
+/* Form */
+.form {
+  width: 550px;
+  margin: 0 auto;
+
+  border-radius: 0.35rem;
+  padding: 1.5rem;
+}
+
+.form-box{
+  margin-bottom: 25px;
+  padding: 25px;
+  border: 1px solid #dfdfdf;
+  border-radius: 8px;
+}
+
+.form-control{
+  border: none !important;
+  border-bottom: 1px solid  #dfdfdf!important;
+  border-radius: 0px !important;
+}
+.form-select{
+  border: none !important;
+  border-bottom: 1px solid  #dfdfdf!important;
+  border-radius: 0px !important;
+}
+
+.form-check-input{
+  border-radius: 0 !important;
+}
+
+.form-check-input:checked{
+  background-color: #FF0000 !important;
+}
+
+.form-box-title{
+  font-family: 'Poppins' !important;
+  font-size: 23px;
+  font-weight: 700;
+}
+.form-box-desc{
+  margin-bottom: 30px;
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.step-title{
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+.form-step {
+  display: none;
+  transform-origin: top;
+  animation: animate 0.5s;
+}
+
+.form-step-active {
+  display: block;
+}
+
+.input-group {
+  margin: 2rem 0;
+}
+.alert-warning{
+  font-size: 15px;
+}
+
+.alert-warning{
+  font-size: 14px;
+}
+
+.alert-warning {
+  --bs-alert-color: #000000;
+  --bs-alert-bg: #f0f2f4;
+  --bs-alert-border-color: #ffecb500;
+}
+.lock-icon{
+  font-size: 20px;
+  color: #7d7d7d !important;
+}
+
+.form-control:focus {
+  color: #858585;
+  background-color: transparent;
+  border-color: #858585;
+  outline: 0;
+  box-shadow: 0 0 0 0;
+}
+.form-select:focus {
+  color: #858585;
+  background-color: transparent;
+  border-color: #858585;
+  outline: 0;
+  box-shadow: 0 0 0 0;
+}
+
+.form-check-input:focus{
+  border-color: #858585;
+  outline: 0;
+  box-shadow: 0 0 0 0;
+}
+
+.cc-check-box{
+  margin-left: -5px !important;
+  margin-right: 10px !important;
+  border-radius: 50% !important;
+}
+
+.backup-label{
+  border-bottom: 1px solid #dfdfdf;
+  padding: 0px 40px 3px 0;
+}
+
+/* .text-area{
+	resize: none;
+} */
+
+.cc-comment{
+  padding: 10px !important;
+  background-color: #f3f3f3 !important;
+  border: none !important;
+  resize: none;
+}
+
+.cc-comment:focus{
+  border: none !important;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+/* Button */
+.btns-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* .btn {
+  padding: 0.75rem;
+  display: block;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+} */
+.btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+}
+
+.passport-box{
+	display: none
+}
+
+.success-wrap{
+  padding-top: 60px;
+}
+
+.success-wrap h1{
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.success-icon{
+  margin-bottom: 10px;
+  background-color: #13C39C;
+  color: #fff;
+  padding: 25px 33px;
+  font-size: 80px;
+  border-radius: 50%;
+  border: 2px solid springgreen;
+}
+
+.unsuccess-icon{
+  margin-bottom: 10px;
+  background-color: rgb(238, 82, 82);
+  color: #fff;
+  padding: 25px 40px;
+  font-size: 80px;
+  border-radius: 50%;
+  border: 2px solid rgb(248, 36, 7);
+}
+
+
+.success-wrap p{
+  color: #9d9d9d;
+}
+
+.success-wrap a{
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.p-1{
+  font-family: 'Poppins';
+  color: #000 !important;
+  font-weight: 700;
+}
+
+.p-2{
+  color: #9d9d9d;
+}
+
+.p-22{
+  color: #000 !important;
+}
+
+.p-22 a{
+  color: #0b94de !important;
+  text-decoration: none;
+}
